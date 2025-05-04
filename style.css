@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: #ccc;
+  font-family: 'Creepster', cursive, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.fog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://i.imgur.com/44j2W9F.png') repeat;
+  opacity: 0.04;
+  animation: moveFog 60s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes moveFog {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-500px, -500px); }
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(#000, #111);
+  border-bottom: 1px solid #333;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: crimson;
+  text-shadow: 0 0 15px crimson;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #888;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.place {
+  background: rgba(20, 20, 20, 0.8);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px crimson;
+}
+
+.place h2 {
+  color: crimson;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  color: #666;
+  background: #000;
+  border-top: 1px solid #333;
+  position: relative;
+  z-index: 2;
+}
